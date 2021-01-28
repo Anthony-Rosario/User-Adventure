@@ -15,5 +15,5 @@ form.addEventListener('submit', (e) => {
     const userStrignified = JSON.stringify(user);
     localStorage.setItem('USER', userStrignified);
 
-    window.location = './map';
+    window.location = './map/index.html';
 });
