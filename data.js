@@ -5,12 +5,12 @@ const dragonObj = {
         top: '',
         left: ''
     },
-    image: 'assets/Dragon-image.jpg',
+    image: 'Dragon-image.jpg',
     description: `
         Traveling towards Riften, you hear a great roar pierce the sky. It's Mirmulnir awakened from his slumber!
         Unaware of the trouble you are about to face, you quickley ponder. Choose wisely!
     `,
-    choice: [{
+    choices: [{
         id: 'fightDragon',
         description: 'You prepare for combat alongside the other prisoners!',
         result: `
@@ -42,7 +42,7 @@ const thievesGuildObj = {
         top: '',
         left: ''
     },
-    image: './assets/thievesguild.jpg',
+    image: 'thievesguild.jpg',
     description: `
         As you arrive in Riften a man hands you a mysterious note. After reading the note you make your way to small sewer entrance spoken of in said note. Upon entrance you are greeted by Mercer Frey, leader of the Thieve's Guild. He has heard about your endeavors and is interested in your enlistment.
     `,
@@ -84,7 +84,7 @@ const winterholdObj = {
         top: '',
         left: ''
     },
-    image: './assets/College_of_Winterhold.png',
+    image: 'College_of_Winterhold.png',
     description: `
         After leaving Riften, your journey across the northern trail leads you to the decrepit ruins of a College
         once adored by many. Today it stands as the only bastion of honing your magical skills. 
@@ -138,11 +138,11 @@ const winterholdObj = {
 
 // }
 
-const quests = {
+const quests = [
     dragonObj,
     thievesGuildObj,
     winterholdObj,
     // nightengalesObj
-};
+];
 
 export default quests;

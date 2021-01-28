@@ -33,15 +33,34 @@ section {
 
 header {
     display: flex;
+    flex-direction: row;
     justify-content: flex-end;
     background-color: var(--color3);
     height: var(--header-height);
     box-shadow: var(--shadow);
 }
 
-footer {
-    display: flex;
-    justify-content: flex-end;
-    background-color: var(--color3);
-    box-shadow: var(--shadow);
+.gold-amount {
+    height: 25px;
+    width: 25px;
+}
+
+.hp-amount {
+    height: 25px;
+    width: 25px;
+    margin-top: 1rem;
+}
+
+.user-ui {
+    margin-right: 1rem;
+}
+
+
+.map {
+    width: 1000px;
+    height: 800px;
+}
+
+label {
+    display: block;
 }
