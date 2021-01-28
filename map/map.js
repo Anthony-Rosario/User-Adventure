@@ -5,7 +5,7 @@ const ul = document.querySelector('ul');
 const user = JSON.parse(localStorage.getItem('USER'));
 
 let allQuestsCompleted = true;
-console.log(quests);
+
 
 for (const quest of quests) {
     if (!user.completed[quest.id]) {
