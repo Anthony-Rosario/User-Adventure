@@ -1,4 +1,4 @@
-import { health, gold, liveGoldQuestLine, deadGoldQuestLine } from '../results/completedmessages.js';
+import { health, liveGoldQuestLine, deadGoldQuestLine } from '../results/completedmessages.js';
 import { scoreHp, scoreGold } from '../results/results-utils.js';
 
 
@@ -7,6 +7,7 @@ const storyResults = document.getElementById('results');
 const hpResult = scoreHp(user.hp);
 const goldResult = scoreGold(user.gold);
 const healthMessage = health[hpResult];
+const buttonReset = document.getElementById('start-over');
 
 let goldMessages = null;
 
@@ -20,8 +21,13 @@ else {
 
 const goldMessage = goldMessages[goldResult];
 
-const story = `Upon ya yafafass, tast satsf ${user.name} the ${user.race} 1231 
+const story = `${user.name}, the ${user.race}, 
               ${healthMessage} ${goldMessage}`;
 
 
 storyResults.textContent = story;
+
+buttonReset.addEventListener('click', () => {
+    localStorage.clear(user);
+    window.location = '../index.html';
+});

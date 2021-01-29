@@ -19,13 +19,18 @@ if (user.hp <= 0 || allQuestsCompleted) {
 }
 
 
-for (let quest of quests) {
+for (const quest of quests) {
     const li = document.createElement('li');
     const a = document.createElement('a');
-
+    
     a.textContent = quest.title;
     a.href = `../quests/?id=${quest.id}`;
-
+    if (user.completed[quest.id] === true) {
+        a.classList = 'hide-quest';
+        a.style.textDecoration = 'line-through';
+    }
     li.append(a);
     ul.append(li);
 }
+
+

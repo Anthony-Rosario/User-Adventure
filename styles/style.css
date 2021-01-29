@@ -64,3 +64,7 @@ header {
 label {
     display: block;
 }
+
+.hide-quest{
+    pointer-events: none;
+}

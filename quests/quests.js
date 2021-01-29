@@ -49,12 +49,11 @@ form.addEventListener('submit', (e) => {
     const selectionId = formData.get('choices');
     const choice = findById(quest.choices, selectionId);
     const user = JSON.parse(localStorage.getItem('USER'));
-
     user.hp += choice.hp;
     user.gold += choice.gold;
     resultsSpan.textContent = choice.result;
     user.completed[questId] = true;
-
+    
     localStorage.setItem('USER', JSON.stringify(user));
 });
 
