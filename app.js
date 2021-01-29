@@ -1,5 +1,15 @@
-// import functions and grab DOM elements
+import { makeUser } from './utils.js';
 
-// initialize state
+const form = document.querySelector('form');
 
-// set event listeners to update state and DOM
+form.addEventListener('submit', (e) => {
+    e.preventDefault();
+
+    const formData = new FormData(form);
+    const user = makeUser(formData);
+
+    const userStrignified = JSON.stringify(user);
+    localStorage.setItem('USER', userStrignified);
+
+    window.location = './map/index.html';
+});
