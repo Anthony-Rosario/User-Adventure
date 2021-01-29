@@ -9,3 +9,14 @@ export function getFromLocalStorage(key){
 export function setInLocalStorage(key, value){
     localStorage.setItem(key, JSON.stringify(value));
 }
+
+export function makeUser(formData) {
+    const user = {
+        name: formData.get('name'),
+        race: formData.get('race'),
+        hp: 100,
+        gold: 0,
+        completed: {},
+    };
+    return user;
+}

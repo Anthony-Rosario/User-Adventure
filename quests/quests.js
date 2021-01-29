@@ -4,6 +4,8 @@ const h1 = document.querySelector('h1');
 const img = document.querySelector('section img');
 const p = document.querySelector('p');
 const form = document.querySelector('form');
+const resultsSpan = document.querySelector('#results-span');
+const openMap = document.querySelector('#back-to-map');
 
 
 
@@ -50,10 +52,13 @@ form.addEventListener('submit', (e) => {
 
     user.hp += choice.hp;
     user.gold += choice.gold;
+    resultsSpan.textContent = choice.result;
     user.completed[questId] = true;
 
     localStorage.setItem('USER', JSON.stringify(user));
+});
 
+
+openMap.addEventListener('click', () => {
     window.location = '../map/index.html';
-
 });
